@@ -1,0 +1,52 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+#issueTrackerURL = ""
+license = "Insert License Here"
+
+[[mods]]
+modId = "cobbleemistuff"
+version = "${version}"
+displayName = "Cobble EMI Stuff"
+authors = "LaMalditaG"
+description = '''
+EMI addon for Cobblemon features
+'''
+logoFile = "assets/cobbleemistuff/icon.png"
+
+[[dependencies.cobbleemistuff]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.cobbleemistuff]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.cobbleemistuff]]
+modId = "architectury"
+type = "required"
+versionRange = "[13.0.8,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.cobbleemistuff]]
+modId = "emi"
+type = "required"
+versionRange = "[1.0.0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.cobbleemistuff]]
+modId = "cobblemon"
+type = "required"
+versionRange = "[1.7.0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[mixins]]
+config = "cobbleemistuff.mixins.json"
