@@ -52,6 +52,8 @@ subprojects {
     dependencies {
         minecraft "net.minecraft:minecraft:$rootProject.minecraft_version"
         mappings loom.officialMojangMappings()
+
+        compileOnly "dev.emi:emi-xplat-mojmap:${emi_version}:api"
     }
 
     java {

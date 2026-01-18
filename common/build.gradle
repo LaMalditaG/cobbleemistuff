@@ -12,7 +12,7 @@ dependencies {
     modImplementation "dev.architectury:architectury:$project.architectury_api_version"
 
     modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
-//    modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
+    modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
 
     modCompileOnly "com.cobblemon:fabric:${project.cobblemon_version}"
 

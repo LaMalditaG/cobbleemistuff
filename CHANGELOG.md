@@ -1,0 +1,1 @@
+Added compatibility with brewing stand recipes

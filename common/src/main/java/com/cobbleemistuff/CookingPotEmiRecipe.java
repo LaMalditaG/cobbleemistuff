@@ -29,6 +29,7 @@ public class CookingPotEmiRecipe implements EmiRecipe {
 
     CookingPotRecipe cookingPotRecipe;
     CookingPotShapelessRecipe cookingPotShapelessRecipe;
+    ResourceLocation id = null;
 
     boolean isShapeless;
 
@@ -132,5 +133,17 @@ public class CookingPotEmiRecipe implements EmiRecipe {
         }
 
         widgetHolder.addSlot(EmiIngredient.of(Ingredient.of(result)),offsetX+91,offsetY+33).recipeContext(this).large(true);
+    }
+
+    static ResourceLocation generateId(CookingPotRecipe recipe){
+        String iid = CobbleEmiUtils.subId(recipe.getIngredients().getFirst().getItems()[0].getItem());
+        String oid = CobbleEmiUtils.subId(recipe.getResult().getItem());
+        return ResourceLocation.tryBuild(CobbleEmiStuff.MOD_ID,"/cooking_pot/shaped/item/" + iid + "/" + oid);
+    }
+
+    static ResourceLocation generateId(CookingPotShapelessRecipe recipe){
+        String iid = CobbleEmiUtils.subId(recipe.getIngredients().getFirst().getItems()[0].getItem());
+        String oid = CobbleEmiUtils.subId(recipe.getResult().getItem());
+        return ResourceLocation.tryBuild(CobbleEmiStuff.MOD_ID,"/cooking_pot/shapeless/item/" + iid + "/" + oid);
     }
 }
